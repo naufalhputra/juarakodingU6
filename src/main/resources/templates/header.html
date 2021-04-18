@@ -1,0 +1,23 @@
+<div th:fragment="header">
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Juaracoding U6</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a th:attr="class=${active == 0 ? 'nav-link active' : 'nav-link'}"  href="/index/view/">Home</a>
+       
+        <a th:attr="class=${active == 1 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/admin/view/'}">Lihat Admin</a>
+        <a th:attr="class=${active ==2 ? 'nav-link active' : 'nav-link'}"  th:href="@{'/pelapor/view/'}">Lihat Pelapor </a>
+        <a th:attr="class=${active == 3 ? 'nav-link active' : 'nav-link'}"   th:href="@{'/laporan/view/'}">Lihat Laporan</a>
+		<a th:attr="class=${active == 4 ? 'nav-link active' : 'nav-link'}"   th:href="@{'/laporan/add/'}">Lihat Laporan</a>
+		
+        <a  class ="nav-link" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
